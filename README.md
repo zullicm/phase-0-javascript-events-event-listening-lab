@@ -1,4 +1,4 @@
-# Interacting with the DOM via JavaScript Event Listeners
+# Interacting with the DOM via JavaScript Event Listeners - Codealong
 
 ## Learning Goals
 
@@ -31,7 +31,7 @@ the name of the event, and a function to handle the event.
 
 Start by adding a listener for `click` events to the `main#main` element
 in `index.html`. Once you've opened `index.html` in the browser, enter the
-following in the browser's JS console:
+following into `index.js`.
 
 ```js
 const main = document.getElementById('main');
@@ -43,20 +43,20 @@ main.addEventListener('click', function(event) {
 
 ## Demonstrate Preventing the Default Behavior for DOM Nodes with `preventDefault()`
 
-Let's test out preventing the
-default behavior of the input by keeping it from receiving the "g" character.
+Let's test out preventing the default behavior of the input by keeping it from
+receiving the "g" character.
 
 ```js
 const input = document.querySelector('input');
 
 input.addEventListener('keydown', function(e) {
   if (e.which === 71) {
-    console.log('default prevented');
-    return e.preventDefault();
+    console.log('default prevented')
+    return e.preventDefault()
   } else {
-    console.log('Not a "g"');
+    console.log('Not a "g"')
   }
-});
+})
 ```
 
 Now try to type "g" in the input--not working, right?
@@ -200,12 +200,11 @@ Now try clicking on any node — you should only see one log statement!
 
 ## Conclusion
 
-We covered a lot in this lesson. Feel free to edit `index.html`, to write code
-directly in the document (just put it between `<script></script>` tags), and to
-play around with different events. It's important to practice so you can get the
-hang of it! You can practice adding an event listener, using different event
-triggers, and intercepting user interactions with `e.preventDefault()` and
-`e.stopPropagation().`
+We covered a lot in this lesson. Edit `index.js` to rewrite your codealong JavaScript code.
+Create 3 functions using the events we discussed in this lesson:`addingEventListener`,
+`preventingDefault`, and `stoppingPropagation` to pass the tests. Feel free to use the browser
+dev tools to play around with more events. It's important to practice so you can get the
+hang of it!
 
 ## Resources
 
