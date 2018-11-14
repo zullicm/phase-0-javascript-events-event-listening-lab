@@ -28,4 +28,3 @@ function stoppingPropagation(){
     divs[i].addEventListener('click', bubble);
   }
 }
-
