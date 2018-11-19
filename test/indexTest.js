@@ -1,17 +1,15 @@
 const sinon = require('sinon');
 
-describe("index.html", () => {
-  it("includes div", () => {
-    expect(document.querySelector('body').innerHTML).to.include('<main id="main">')
-  })
-})
-
 describe("index.js", () => {
-  it("returns ", () => {
-    const input = document.getElementById('input');
-    sinon.spy(input, 'addEventListener')
+  let input;
 
-    addingEventListener()
-    expect(input.addEventListener.called).to.be.true
+  beforeEach(function() {
+    input = document.getElementById('input');
+    sinon.spy(input, 'addEventListener');
+  })
+
+  it("binds an event listener in addingEventListener()", () => {
+    addingEventListener();
+    expect(input.addEventListener.called).to.be.true;
   })
 })
